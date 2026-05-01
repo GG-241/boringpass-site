@@ -1,0 +1,13 @@
+title: BoringPass
+description: Privacy-first password management. No cloud, no compromise.
+url: "https://gg-241.github.io"
+baseurl: "/boringPass"
+
+# GitHub Pages settings
+theme: null
+plugins: []
+
+# Exclude files that should not be published
+exclude:
+  - .gitignore
+  - README.md
