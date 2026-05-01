@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BoringPass Privacy Policy — local-first password manager with no data collection by default." />
+  <title>Privacy Policy — BoringPass</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0B100E;
+      --bg-card:    #111917;
+      --bg-card-hi: #152018;
+      --accent:     #70D9BA;
+      --accent2:    #4db89a;
+      --text:       #E8F0EE;
+      --muted:      #9BB5AF;
+      --border:     rgba(112, 217, 186, 0.15);
+      --radius:     12px;
+      --nav-h:      64px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 5vw, 3rem);
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 16, 14, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-brand svg { flex-shrink: 0; }
+
+    .nav-back {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text); }
+
+    /* ── Content ── */
+    .page-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem) clamp(4rem, 10vw, 6rem);
+    }
+
+    .page-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+
+    .policy-section {
+      margin-bottom: 2.75rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+      line-height: 1.75;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul li::before {
+      content: "–";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .callout {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .callout p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    a { color: var(--accent); }
+    a:hover { opacity: 0.8; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem clamp(1rem, 5vw, 3rem);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ NAV ══ -->
+<nav aria-label="Primary navigation">
+  <a href="index.html" class="nav-brand" aria-label="Back to BoringPass home">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3" y="11" width="18" height="11" rx="2" stroke="#70D9BA" stroke-width="1.75" fill="none"/>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#70D9BA" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+      <circle cx="12" cy="16" r="1.5" fill="#70D9BA"/>
+    </svg>
+    BoringPass
+  </a>
+  <a href="index.html" class="nav-back" aria-label="Back to home page">&larr; Back to home</a>
+</nav>
+
+<main>
+  <div class="page-wrap">
+
+    <span class="page-label">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: May 1, 2026</p>
+
+    <!-- 1. Introduction -->
+    <div class="policy-section">
+      <h2>1. Introduction</h2>
+      <p>
+        BoringPass respects your privacy. This policy explains what data we collect, what we do not collect,
+        and how the app handles any information that touches your device. The short version: almost nothing
+        leaves your device by default, and nothing ever leaves it without your explicit action.
+      </p>
+      <div class="callout">
+        <p>BoringPass has no backend server and no user accounts. We cannot access your vault because we
+        have no means to do so. Your encryption key never leaves your device.</p>
+      </div>
+    </div>
+
+    <!-- 2. Data we collect -->
+    <div class="policy-section">
+      <h2>2. Data We Collect</h2>
+      <p>By default, BoringPass collects no data that leaves your device. Specifically:</p>
+      <ul>
+        <li>Your vault is stored as an encrypted .kdbx file in your device's local storage. It is never
+            transmitted to us or any server we operate.</li>
+        <li>We do not collect analytics, telemetry, or usage statistics.</li>
+        <li>We do not collect any personally identifiable information.</li>
+        <li>There is no account registration, login, or profile associated with BoringPass.</li>
+      </ul>
+      <p>
+        The only two exceptions — cloud sync and crash diagnostics — are both opt-in and described in
+        detail below.
+      </p>
+    </div>
+
+    <!-- 3. Cloud sync -->
+    <div class="policy-section">
+      <h2>3. Cloud Sync</h2>
+      <p>
+        BoringPass supports optional cloud sync. It is disabled by default and must be turned on
+        manually in Settings.
+      </p>
+      <p>When you enable cloud sync, your encrypted .kdbx vault file is uploaded to the provider you
+        choose: Google Drive, Dropbox, OneDrive, iCloud, Nextcloud, or WebDAV. The following applies
+        to all providers:</p>
+      <ul>
+        <li>Only the encrypted vault file is transmitted. BoringPass never sends your master password,
+            individual entries, or any plaintext credential data.</li>
+        <li>Your decryption key never leaves your device. The cloud provider receives only an opaque
+            binary blob that it cannot read.</li>
+        <li>We (the BoringPass developer) never receive or have access to your cloud-synced data.
+            Sync happens directly between your device and the provider you chose.</li>
+        <li>Your relationship with the cloud provider (Google, Dropbox, Microsoft, Apple, Nextcloud)
+            is governed by that provider's own terms of service and privacy policy.</li>
+      </ul>
+    </div>
+
+    <!-- 4. Ads -->
+    <div class="policy-section">
+      <h2>4. Ads</h2>
+      <p>
+        The free tier of BoringPass displays banner advertisements served by Google Mobile Ads
+        (AdMob). Ad serving is handled entirely by Google and is subject to Google's own privacy
+        policy and data practices. We do not pass any vault data or credentials to Google's ad
+        system.
+      </p>
+      <p>
+        Upgrading to BoringPass Pro ($4.99, one-time purchase) removes all advertisements permanently.
+        No ads are shown to Pro users under any circumstances.
+      </p>
+    </div>
+
+    <!-- 5. Crash diagnostics -->
+    <div class="policy-section">
+      <h2>5. Crash Diagnostics</h2>
+      <p>
+        BoringPass includes an opt-in local crash log. It is disabled by default.
+      </p>
+      <ul>
+        <li>When enabled, crash and error information is written to a log file stored in the app's
+            documents directory on your device.</li>
+        <li>The log file is never transmitted automatically. It stays on your device until you
+            delete it.</li>
+        <li>You can view the log, enable it, or disable it at any time in Settings → Diagnostics.</li>
+        <li>If you choose to share a log with us for support purposes, that is your voluntary action;
+            we will use the information only to diagnose the reported issue and will not retain it
+            beyond that purpose.</li>
+      </ul>
+      <p>
+        Crash logs never contain vault passwords, entry data, or encryption keys. They contain
+        stack traces and device-level context (OS version, app version, error type).
+      </p>
+    </div>
+
+    <!-- 6. Third-party services -->
+    <div class="policy-section">
+      <h2>6. Third-Party Services</h2>
+      <p>BoringPass integrates with the following third-party services in limited circumstances:</p>
+      <ul>
+        <li>
+          <strong style="color: var(--text);">Google Mobile Ads (AdMob)</strong> — used to serve
+          banner ads to free-tier users. Subject to Google's Privacy Policy (search for
+          "Google Privacy Policy" at google.com).
+        </li>
+        <li>
+          <strong style="color: var(--text);">Apple App Store In-App Purchase</strong> — used to
+          process Pro upgrades on iOS. Subject to Apple's Privacy Policy (search for
+          "Apple Privacy Policy" at apple.com).
+        </li>
+        <li>
+          <strong style="color: var(--text);">Google Play In-App Purchase</strong> — used to
+          process Pro upgrades on Android. Subject to Google's Privacy Policy (search for
+          "Google Privacy Policy" at google.com).
+        </li>
+        <li>
+          <strong style="color: var(--text);">Have I Been Pwned API</strong> — used optionally when
+          you run a password breach check. Only the first 5 characters of a SHA-1 hash of the
+          password being checked are transmitted (k-anonymity model). The full password or its
+          full hash is never sent.
+        </li>
+      </ul>
+      <p>
+        We are not responsible for the data practices of these third parties. Their respective
+        privacy policies govern how they handle any information they receive.
+      </p>
+    </div>
+
+    <!-- 7. Children -->
+    <div class="policy-section">
+      <h2>7. Children</h2>
+      <p>
+        BoringPass is not directed at children under the age of 13, and we do not knowingly collect
+        any information from children under 13. If you believe a child under 13 has provided personal
+        information through the app, please contact us at the address below.
+      </p>
+    </div>
+
+    <!-- 8. Contact -->
+    <div class="policy-section">
+      <h2>8. Contact</h2>
+      <p>
+        If you have questions about this privacy policy or about how BoringPass handles data,
+        please contact us at:
+      </p>
+      <p>
+        <a href="mailto:itsggkoumas@gmail.com">itsggkoumas@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- 9. Changes -->
+    <div class="policy-section">
+      <h2>9. Changes to This Policy</h2>
+      <p>
+        If we make material changes to this privacy policy, we will update the "Last updated" date
+        at the top of this page and, where appropriate, notify users through the app or the
+        App Store / Google Play release notes. Continued use of BoringPass after a policy update
+        constitutes acceptance of the revised policy.
+      </p>
+      <p>
+        We will never retroactively introduce data collection practices that are materially less
+        protective than those described here without prominent notice.
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════ FOOTER ══ -->
+<footer aria-label="Site footer">
+  <p>&copy; 2026 BoringPass</p>
+  <ul class="footer-links" role="list">
+    <li><a href="https://github.com/GG-241/boringPass" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+    <li><a href="#">Terms</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
